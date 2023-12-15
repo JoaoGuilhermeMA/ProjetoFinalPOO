@@ -13,9 +13,9 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Conexao.conectar();
-        Scene scene = new Scene(fxmlLoader.load(), 900, 700);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+        Scene telaAbertura = new Scene(fxmlLoader.load(), 900, 700);
+        stage.setTitle("OinkApp");
+        stage.setScene(telaAbertura);
         stage.show();
     }
 
