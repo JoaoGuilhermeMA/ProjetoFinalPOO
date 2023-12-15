@@ -1,3 +1,5 @@
+package dominio;
+
 public class Porco {
     private int idAnimal;
     private String sexo;
