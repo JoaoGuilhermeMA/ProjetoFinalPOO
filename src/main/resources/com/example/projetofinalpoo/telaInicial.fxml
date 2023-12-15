@@ -16,7 +16,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="721.0" layoutX="-85.0" layoutY="-259.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
          </children>
       </AnchorPane>
-      <Button layoutX="348.0" layoutY="155.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="ANIMAIS" textFill="WHITE">
+      <Button fx:id="btnPorcos" layoutX="348.0" layoutY="155.0" mnemonicParsing="false" onAction="#telaPorcos" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="ANIMAIS" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
