@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane minHeight="700.0" minWidth="100.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaMedicacaoController">
+   <children>
+      <Button layoutX="459.0" layoutY="408.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="164.0" layoutY="177.0" text="Name" />
+      <TextField layoutX="203.0" layoutY="173.0" promptText="Nome da medicação" />
+      <TextField layoutX="203.0" layoutY="210.0" promptText="ML por KG" />
+      <Label layoutX="164.0" layoutY="214.0" text="Name" />
+   </children>
+</AnchorPane>

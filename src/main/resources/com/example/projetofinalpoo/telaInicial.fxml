@@ -31,7 +31,7 @@
             <Font size="36.0" />
          </font>
       </Button>
-      <Button layoutX="348.0" layoutY="469.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="MEDICAÇÕES" textFill="#f2f2f2">
+      <Button fx:id="btnMedicacao" layoutX="348.0" layoutY="469.0" mnemonicParsing="false" onAction="#telaMedicacao" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="MEDICAÇÕES" textFill="#f2f2f2">
          <font>
             <Font size="36.0" />
          </font>
