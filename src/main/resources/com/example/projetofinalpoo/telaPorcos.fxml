@@ -11,10 +11,14 @@
    <children>
       <TableView layoutX="32.0" layoutY="67.0" prefHeight="486.0" prefWidth="936.0" style="-fx-background-radius: 10px; -fx-background-color: #f0f0f0;">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="RAÇA" />
-            <TableColumn prefWidth="75.0" text="RAÇA" />
-            <TableColumn prefWidth="75.0" text="PESO" />
+          <TableColumn fx:id="idPorco" prefWidth="54.0" text="ID" />
+          <TableColumn fx:id="raca" prefWidth="163.0" text="RAÇA" />
+            <TableColumn fx:id="idade" prefWidth="82.0" text="IDADE" />
+            <TableColumn fx:id="peso" prefWidth="79.0" text="PESO" />
+            <TableColumn fx:id="sexo" prefWidth="109.0" text="SEXO" />
+            <TableColumn fx:id="vacinas" prefWidth="169.0" text="VACINAS" />
+            <TableColumn fx:id="cuidador" prefWidth="184.0" text="CUIDADOR" />
+            <TableColumn fx:id="vivedouro" prefWidth="95.0" text="VIVEDOURO" />
         </columns>
       </TableView>
       <Button fx:id="addPorco" layoutX="917.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarPorco" style="-fx-background-radius: 30px; -fx-font-size: 20px;" text="+">

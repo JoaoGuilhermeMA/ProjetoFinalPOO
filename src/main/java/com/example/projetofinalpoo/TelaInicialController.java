@@ -23,7 +23,7 @@ public class TelaInicialController {
     @FXML
     void telaMedicacao(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("telaMedicacao.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("medicacao.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
         stage.setScene(scene);
         stage.show();
