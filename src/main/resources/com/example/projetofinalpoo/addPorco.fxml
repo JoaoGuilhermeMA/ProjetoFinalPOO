@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddPorcoController">
    <children>
-      <Button layoutX="830.0" layoutY="568.0" mnemonicParsing="false" text="Button" />
-      <TextField layoutX="234.0" layoutY="144.0" />
-      <TextField layoutX="234.0" layoutY="184.0" />
-      <TextField layoutX="234.0" layoutY="223.0" prefHeight="25.0" prefWidth="149.0" />
-      <TextField layoutX="234.0" layoutY="265.0" />
-      <TextField layoutX="234.0" layoutY="304.0" />
-      <TextField layoutX="234.0" layoutY="344.0" />
-      <TextField layoutX="234.0" layoutY="382.0" />
+      <Button fx:id="salvarDados" layoutX="657.0" layoutY="583.0" mnemonicParsing="false" text="Cadastrar">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <TextField fx:id="sexo" layoutX="429.0" layoutY="190.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField layoutX="429.0" layoutY="230.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField layoutX="429.0" layoutY="269.0" prefHeight="25.0" prefWidth="149.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField layoutX="429.0" layoutY="311.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="391.0" layoutY="194.0" text="SEXO" />
+      <Label layoutX="391.0" layoutY="234.0" text="RAÇA" />
+      <Label layoutX="391.0" layoutY="273.0" text="IDADE" />
+      <Label layoutX="391.0" layoutY="315.0" text="PESO" />
+      <Label layoutX="351.0" layoutY="354.0" text="MEDICAÇÃO" />
+      <Label layoutX="352.0" layoutY="394.0" text="VIVEDOURO" />
+      <Label layoutX="355.0" layoutY="432.0" text="CUIDADOR" />
+      <ChoiceBox layoutX="429.0" layoutY="350.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="429.0" layoutY="390.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <ChoiceBox layoutX="429.0" layoutY="428.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <Button fx:id="salvarDados1" layoutX="158.0" layoutY="583.0" mnemonicParsing="false" text="+">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </AnchorPane>

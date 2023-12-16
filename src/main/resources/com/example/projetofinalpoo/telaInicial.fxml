@@ -55,5 +55,13 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="737.0" layoutX="811.0" layoutY="-195.0" rotate="140.0" stroke="BLACK" strokeType="INSIDE" width="305.0" />
+      <Button fx:id="btnVivedouro" layoutX="296.0" layoutY="577.0" mnemonicParsing="false" onAction="#telaVivedouro" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VIVEDOURO" textFill="#f2f2f2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddVivedouroController">
+   <children>
+      <TextField layoutX="387.0" layoutY="209.0" promptText="Tipo do Vivedouro" />
+      <TextField layoutX="387.0" layoutY="252.0" promptText="Tamanho do vivedouro" />
+      <Button fx:id="salvarDados" layoutX="536.0" layoutY="432.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

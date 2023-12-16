@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.VivedouroController">
+   <children>
+      <TableView layoutX="261.0" layoutY="97.0" prefHeight="366.0" prefWidth="478.0">
+        <columns>
+          <TableColumn fx:id="idVivedouro" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="tipoVivedouro" minWidth="1.0" prefWidth="314.0" text="TIPO DO VIVEDOURO" />
+            <TableColumn fx:id="tamanho" minWidth="0.0" prefWidth="127.0" text="TAMANHO" />
+        </columns>
+      </TableView>
+      <Button fx:id="adicionar" layoutX="751.0" layoutY="583.0" mnemonicParsing="false" onAction="#adicionarVivedouro" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="voltar" layoutX="224.0" layoutY="583.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
