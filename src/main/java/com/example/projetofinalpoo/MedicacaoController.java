@@ -24,7 +24,7 @@ public class MedicacaoController {
     @FXML
     void adicionarMedicacao(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("telaMedicacao.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("addMedicacao.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
         stage.setScene(scene);
         stage.show();

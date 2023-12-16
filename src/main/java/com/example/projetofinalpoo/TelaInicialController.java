@@ -15,7 +15,7 @@ public class TelaInicialController {
     @FXML
     void telaPorcos(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("telaPorcos.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("porcos.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
         scene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/tableView.css").toExternalForm());
         stage.setScene(scene);

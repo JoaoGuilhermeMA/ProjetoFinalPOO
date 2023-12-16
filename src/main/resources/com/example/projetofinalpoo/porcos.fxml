@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaPorcosController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.PorcosController">
    <children>
       <TableView fx:id="tabelaPorcos" layoutX="32.0" layoutY="97.0" prefHeight="486.0" prefWidth="936.0">
         <columns>

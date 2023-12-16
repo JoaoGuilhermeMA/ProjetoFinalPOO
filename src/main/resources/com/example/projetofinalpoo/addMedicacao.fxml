@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="700.0" minWidth="100.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaMedicacaoController">
+<AnchorPane minHeight="700.0" minWidth="100.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddMedicacaoController">
    <children>
       <Button fx:id="buttonCadastrar" layoutX="459.0" layoutY="408.0" mnemonicParsing="false" onAction="#onCLickButtonCadastrar" text="Cadastrar" />
       <Label layoutX="164.0" layoutY="177.0" text="Name" />

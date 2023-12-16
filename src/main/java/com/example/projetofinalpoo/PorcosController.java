@@ -10,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import java.io.IOException;
 
-public class TelaPorcosController {
+public class PorcosController {
     @FXML
     private TableView<?> tabelaPorcos;
     @FXML

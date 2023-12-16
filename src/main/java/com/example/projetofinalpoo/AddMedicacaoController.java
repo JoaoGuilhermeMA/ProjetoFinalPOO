@@ -10,7 +10,7 @@ import persistencia.MedicacaoDAO;
 
 import java.sql.SQLException;
 
-public class TelaMedicacaoController {
+public class AddMedicacaoController {
     @FXML
     private Button buttonCadastrar;
 
