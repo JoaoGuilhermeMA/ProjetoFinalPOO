@@ -9,14 +9,14 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.MedicacaoController">
    <children>
-      <TableView fx:id="tabelaMedicacao" layoutX="278.0" layoutY="148.0" prefHeight="300.0" prefWidth="445.0">
+      <TableView fx:id="tabelaMedicacao" layoutX="224.0" layoutY="97.0" prefHeight="486.0" prefWidth="552.0">
         <columns>
           <TableColumn fx:id="idMedicacao" prefWidth="43.0" text="ID" />
-          <TableColumn fx:id="nomeMedicacao" prefWidth="286.0" text="NOME" />
-            <TableColumn fx:id="mlporkg" prefWidth="115.0" text="ML por KG" />
+          <TableColumn fx:id="nomeMedicacao" prefWidth="395.0" text="NOME" />
+            <TableColumn fx:id="mlporkg" prefWidth="113.0" text="ML por KG" />
         </columns>
       </TableView>
-      <Button fx:id="btnMedicacao" layoutX="905.0" layoutY="605.0" mnemonicParsing="false" style="-fx-background-radius: 30px;" text="+">
+      <Button fx:id="adicionar" layoutX="776.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarMedicacao" text="+">
          <font>
             <Font size="19.0" />
          </font>
@@ -24,5 +24,18 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button fx:id="voltar" layoutX="185.0" layoutY="611.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="226.0" layoutY="28.0" text="Tabela De Medicamentos">
+         <font>
+            <Font name="Bauhaus 93" size="48.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

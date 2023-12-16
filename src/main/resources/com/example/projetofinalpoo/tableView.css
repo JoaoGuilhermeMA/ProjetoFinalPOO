@@ -2,12 +2,13 @@
     -fx-background-color:  #e6d8cb;
 }
 
-#addPorco {
+#adicionar {
     -fx-background-image: url('mais.png');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
     -fx-background-size: 22px 22px;
     -fx-text-fill: transparent;
+    -fx-border-radius: 30px;
 }
 
 #voltar{
@@ -16,13 +17,13 @@
     -fx-background-position: center center;
     -fx-background-size: 20px 20px;
     -fx-text-fill: transparent;
+    -fx-border-radius: 30px;
 }
 
 .table-view {
     -fx-background-color: #E6D8CB;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
     -fx-background-radius: 10px;
-    -fx-min-width: 936px;
     -fx-min-height: 486px;
     -fx-max-width: 936px;
     -fx-max-height: 486px;

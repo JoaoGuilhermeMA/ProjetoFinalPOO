@@ -69,11 +69,18 @@ public class FuncionarioController {
         }
     }
 
-
     @FXML
     void adicionarFuncionario(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("addFuncionario.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void voltarInicio(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("telaInicial.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
         stage.setScene(scene);
         stage.show();

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -8,14 +9,22 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.VendasController">
    <children>
-      <TableView fx:id="tabelaVendas" layoutX="250.0" layoutY="187.0" prefHeight="263.0" prefWidth="500.0">
+      <TableView fx:id="tabelaVendas" layoutX="229.0" layoutY="97.0" prefHeight="486.0" prefWidth="542.0">
         <columns>
           <TableColumn fx:id="idVenda" prefWidth="37.0" text="ID" />
-          <TableColumn fx:id="idAnimal" prefWidth="55.0" text="ANIMAL" />
-            <TableColumn fx:id="cpfComprador" prefWidth="171.0" text="CPF DO COMPRADOR" />
-            <TableColumn fx:id="dataVenda" prefWidth="113.0" text="DATA DA VENDA" />
-            <TableColumn fx:id="valorVenda" prefWidth="123.0" text="VALOR DA VENDA" />
+          <TableColumn fx:id="idAnimal" prefWidth="66.0" text="ANIMAL" />
+            <TableColumn fx:id="cpfComprador" prefWidth="181.0" text="CPF DO COMPRADOR" />
+            <TableColumn fx:id="dataVenda" prefWidth="131.0" text="DATA DA VENDA" />
+            <TableColumn fx:id="valorVenda" prefWidth="126.0" text="VALOR DA VENDA" />
         </columns>
       </TableView>
+      <Button fx:id="voltar" layoutX="177.0" layoutY="622.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

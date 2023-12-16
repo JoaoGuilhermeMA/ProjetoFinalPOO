@@ -22,7 +22,7 @@
             <TableColumn fx:id="vivedouro" prefWidth="95.0" text="VIVEDOURO" />
         </columns>
       </TableView>
-      <Button fx:id="addPorco" layoutX="931.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarPorco" text="+">
+      <Button fx:id="adicionar" layoutX="931.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarPorco" text="+">
          <font>
             <Font size="18.0" />
          </font>
@@ -34,6 +34,9 @@
          <font>
             <Font size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Label layoutX="341.0" layoutY="28.0" text="Lista De Porcos">
          <font>

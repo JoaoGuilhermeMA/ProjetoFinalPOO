@@ -26,6 +26,7 @@ public class TelaInicialController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("medicacao.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        scene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/tableView.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
@@ -34,6 +35,7 @@ public class TelaInicialController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("vendas.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        scene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/tableView.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
