@@ -13,45 +13,68 @@
          <font>
             <Font size="24.0" />
          </font></Button>
-      <TextField fx:id="sexo" layoutX="429.0" layoutY="190.0">
+      <TextField layoutX="402.0" layoutY="217.0" prefHeight="25.0" prefWidth="181.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <TextField layoutX="429.0" layoutY="230.0">
+      <TextField layoutX="335.0" layoutY="289.0" prefHeight="25.0" prefWidth="49.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <TextField layoutX="429.0" layoutY="269.0" prefHeight="25.0" prefWidth="149.0">
+      <TextField layoutX="563.0" layoutY="289.0" prefHeight="25.0" prefWidth="91.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <TextField layoutX="429.0" layoutY="311.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <Label layoutX="391.0" layoutY="194.0" text="SEXO" />
-      <Label layoutX="391.0" layoutY="234.0" text="RAÇA" />
-      <Label layoutX="391.0" layoutY="273.0" text="IDADE" />
-      <Label layoutX="391.0" layoutY="315.0" text="PESO" />
-      <Label layoutX="351.0" layoutY="354.0" text="MEDICAÇÃO" />
-      <Label layoutX="352.0" layoutY="394.0" text="VIVEDOURO" />
-      <Label layoutX="355.0" layoutY="432.0" text="CUIDADOR" />
-      <ChoiceBox layoutX="429.0" layoutY="350.0" prefWidth="150.0" />
-      <ChoiceBox layoutX="429.0" layoutY="390.0" prefWidth="150.0">
+      <Label layoutX="87.0" layoutY="212.0" text="SEXO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="332.0" layoutY="212.0" text="RAÇA">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="255.0" layoutY="284.0" text="IDADE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="500.0" layoutY="284.0" text="PESO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="363.0" text="MEDICAÇÃO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="609.0" layoutY="212.0" text="VIVEDOURO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="514.0" layoutY="363.0" text="CUIDADOR">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ChoiceBox layoutX="293.0" layoutY="366.0" prefHeight="25.0" prefWidth="188.0" />
+      <ChoiceBox layoutX="750.0" layoutY="215.0" prefHeight="25.0" prefWidth="169.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <ChoiceBox layoutX="429.0" layoutY="428.0" prefWidth="150.0">
+      <ChoiceBox layoutX="647.0" layoutY="366.0" prefHeight="25.0" prefWidth="188.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <Button fx:id="salvarDados1" layoutX="158.0" layoutY="583.0" mnemonicParsing="false" text="+">
+      <Button fx:id="voltarPorco" layoutX="158.0" layoutY="583.0" mnemonicParsing="false" onAction="#voltarPorco" text="+">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
+      <ChoiceBox layoutX="155.0" layoutY="217.0" prefWidth="150.0" />
+      <Label layoutX="268.0" layoutY="79.0" text="Cadastrar Porco">
+         <font>
+            <Font name="Bauhaus 93" size="64.0" />
+         </font>
+      </Label>
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

@@ -1,3 +1,13 @@
 .root{
     -fx-background-color:  #e6d8cb;
 }
+
+#voltarPorco{
+    -fx-background-image: url('desfazer.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 21px 21px;
+    -fx-text-fill: transparent;
+    -fx-border-radius: 30px;
+}
+
