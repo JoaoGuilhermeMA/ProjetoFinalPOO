@@ -6,5 +6,6 @@ module com.example.projetofinalpoo {
     requires java.sql;
 
     opens com.example.projetofinalpoo to javafx.fxml;
+    opens dominio to javafx.base;
     exports com.example.projetofinalpoo;
 }

@@ -1,5 +1,7 @@
 package dominio;
 
+
+
 public class Cuidador {
     private int idCuidador;
     private float salario;
