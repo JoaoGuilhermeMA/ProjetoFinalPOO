@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.VivedouroController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.VivedouroController">
    <children>
-      <TableView layoutX="261.0" layoutY="97.0" prefHeight="366.0" prefWidth="478.0">
+      <TableView fx:id="tabelaVivedouro" layoutX="261.0" layoutY="97.0" prefHeight="366.0" prefWidth="478.0">
         <columns>
           <TableColumn fx:id="idVivedouro" prefWidth="36.0" text="ID" />
           <TableColumn fx:id="tipoVivedouro" minWidth="1.0" prefWidth="314.0" text="TIPO DO VIVEDOURO" />
