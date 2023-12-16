@@ -26,6 +26,7 @@ public class MedicacaoController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("addMedicacao.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        scene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/criarDados.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
