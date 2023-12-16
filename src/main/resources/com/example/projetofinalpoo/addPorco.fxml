@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddPorcoController">
+   <children>
+      <Button layoutX="830.0" layoutY="568.0" mnemonicParsing="false" text="Button" />
+      <TextField layoutX="234.0" layoutY="144.0" />
+      <TextField layoutX="234.0" layoutY="184.0" />
+      <TextField layoutX="234.0" layoutY="223.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField layoutX="234.0" layoutY="265.0" />
+      <TextField layoutX="234.0" layoutY="304.0" />
+      <TextField layoutX="234.0" layoutY="344.0" />
+      <TextField layoutX="234.0" layoutY="382.0" />
+   </children>
+</AnchorPane>
