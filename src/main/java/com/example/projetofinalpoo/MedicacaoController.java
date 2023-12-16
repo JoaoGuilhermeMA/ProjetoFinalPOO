@@ -7,7 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.TableColumn;
-
+import javafx.scene.control.TableView;
 import java.io.IOException;
 
 public class MedicacaoController {
@@ -15,10 +15,10 @@ public class MedicacaoController {
 
     @FXML
     private TableColumn<?, ?> mlporkg;
-
     @FXML
     private TableColumn<?, ?> nomeMedicacao;
-
+    @FXML
+    private TableView<?> tabelaMedicacao;
     @FXML
     private TableColumn<?, ?> idMedicacao;
     @FXML

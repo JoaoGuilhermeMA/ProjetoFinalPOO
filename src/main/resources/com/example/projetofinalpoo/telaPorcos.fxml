@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -9,7 +10,7 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaPorcosController">
    <children>
-      <TableView layoutX="32.0" layoutY="67.0" prefHeight="486.0" prefWidth="936.0" style="-fx-background-radius: 10px; -fx-background-color: #f0f0f0;">
+      <TableView fx:id="tabelaPorcos" layoutX="32.0" layoutY="97.0" prefHeight="486.0" prefWidth="936.0">
         <columns>
           <TableColumn fx:id="idPorco" prefWidth="54.0" text="ID" />
           <TableColumn fx:id="raca" prefWidth="163.0" text="RAÇA" />
@@ -21,7 +22,7 @@
             <TableColumn fx:id="vivedouro" prefWidth="95.0" text="VIVEDOURO" />
         </columns>
       </TableView>
-      <Button fx:id="addPorco" layoutX="917.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarPorco" style="-fx-background-radius: 30px; -fx-font-size: 20px;" text="+">
+      <Button fx:id="addPorco" layoutX="931.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarPorco" text="+">
          <font>
             <Font size="18.0" />
          </font>
@@ -29,5 +30,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button fx:id="voltar" layoutX="32.0" layoutY="611.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="341.0" layoutY="28.0" text="Lista De Porcos">
+         <font>
+            <Font name="Bauhaus 93" size="48.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

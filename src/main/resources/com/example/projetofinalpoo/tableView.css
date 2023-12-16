@@ -1,0 +1,61 @@
+.root {
+    -fx-background-color:  #e6d8cb;
+}
+
+#addPorco {
+    -fx-background-image: url('mais.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 22px 22px;
+    -fx-text-fill: transparent;
+}
+
+#voltar{
+    -fx-background-image: url('desfazer.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: 20px 20px;
+    -fx-text-fill: transparent;
+}
+
+.table-view {
+    -fx-background-color: #E6D8CB;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-background-radius: 10px;
+    -fx-min-width: 936px;
+    -fx-min-height: 486px;
+    -fx-max-width: 936px;
+    -fx-max-height: 486px;
+}
+
+.table-column {
+    -fx-text-fill: #2F3559;
+}
+
+.table-column .label {
+    -fx-background-color: #2F3559;
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-background-color: #F1BBBB;
+    -fx-text-fill: #2F3559;
+    -fx-font-size: 16px;
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #9A5071;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #E394A7;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #F1BBBB;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+}
