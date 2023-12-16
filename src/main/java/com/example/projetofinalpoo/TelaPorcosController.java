@@ -6,10 +6,35 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.scene.control.TableColumn;
 import java.io.IOException;
 
 public class TelaPorcosController {
+
+    @FXML
+    private TableColumn<?, ?> idade;
+
+    @FXML
+    private TableColumn<?, ?> vivedouro;
+
+    @FXML
+    private TableColumn<?, ?> peso;
+
+    @FXML
+    private TableColumn<?, ?> vacinas;
+
+    @FXML
+    private TableColumn<?, ?> raca;
+
+    @FXML
+    private TableColumn<?, ?> idPorco;
+
+    @FXML
+    private TableColumn<?, ?> cuidador;
+
+    @FXML
+    private TableColumn<?, ?> sexo;
+
     @FXML
     void adicionarPorco(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
