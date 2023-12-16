@@ -14,8 +14,8 @@ import java.sql.SQLException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException, SQLException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene telaAbertura = new Scene(fxmlLoader.load(), 900, 700);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("entrar.fxml"));
+        Scene telaAbertura = new Scene(fxmlLoader.load(), 1000, 700);
         stage.setTitle("OinkApp");
         stage.setScene(telaAbertura);
         stage.show();

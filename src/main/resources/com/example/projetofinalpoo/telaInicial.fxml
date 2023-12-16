@@ -9,41 +9,58 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="700.0" minWidth="900.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #e6d8cb;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaInicialController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #e6d8cb;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.TelaInicialController">
    <children>
       <AnchorPane layoutY="502.0" prefHeight="300.0" prefWidth="300.0" rotate="-35.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="721.0" layoutX="-85.0" layoutY="-259.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="721.0" layoutX="-27.0" layoutY="-268.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
          </children>
       </AnchorPane>
       <Button fx:id="btnPorcos" layoutX="348.0" layoutY="155.0" mnemonicParsing="false" onAction="#telaPorcos" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="ANIMAIS" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="348.0" layoutY="364.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="FUNCIONÁRIOS" textFill="#f2f2f2">
+      <Button fx:id="btnFuncionario" layoutX="348.0" layoutY="364.0" mnemonicParsing="false" onAction="#telaFuncionarios" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="FUNCIONÁRIOS" textFill="#f2f2f2">
          <font>
             <Font size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button layoutX="347.0" layoutY="262.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VENDAS" textFill="WHITE">
+      <Button fx:id="btnVendas" layoutX="347.0" layoutY="262.0" mnemonicParsing="false" onAction="#telaVendas" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VENDAS" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="btnMedicacao" layoutX="348.0" layoutY="469.0" mnemonicParsing="false" onAction="#telaMedicacao" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="MEDICAÇÕES" textFill="#f2f2f2">
          <font>
             <Font size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <AnchorPane layoutX="705.0" layoutY="-161.0">
          <children>
-            <ImageView fitHeight="247.0" fitWidth="388.0" layoutX="51.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" rotate="-33.0">
+            <ImageView fitHeight="289.0" fitWidth="528.0" layoutX="-11.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" rotate="-130.0">
                <image>
                   <Image url="@inosuke.jpg" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
+      <Label layoutX="60.0" layoutY="29.0" text="OinkApp">
+         <font>
+            <Font name="Bauhaus 93" size="64.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
