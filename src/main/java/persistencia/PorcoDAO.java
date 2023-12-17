@@ -1,6 +1,9 @@
 package persistencia;
 
+import dominio.Cuidador;
+import dominio.Medicacao;
 import dominio.Porco;
+import dominio.Vivedouro;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,27 +16,39 @@ public class PorcoDAO {
         this.connection = connection;
     }
 
-    // Método para adicionar um Porco ao banco de dados
     public void adicionarPorco(Porco porco) throws SQLException {
-        String query = "INSERT INTO Porco(sexo, peso, idade, raca, idVacina, idCuidador, idVivedouro, vendido) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        String query = "INSERT INTO Porco(sexo, peso, idade, raca, vendido, idVacina, idCuidador, idVivedouro) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, porco.getSexo());
             statement.setString(2, porco.getPeso());
             statement.setInt(3, porco.getIdade());
             statement.setString(4, porco.getRaca());
-            statement.setInt(5, porco.getIdVacina());
-            statement.setInt(6, porco.getIdCuidador());
-            statement.setInt(7, porco.getIdVivedouro());
-            statement.setBoolean(8, porco.isVendido());
+            statement.setBoolean(5, porco.isVendido());
+            statement.setInt(6, porco.getMedicacao().getIdMedicacao()); // Supondo que Porco tenha uma referência para Medicacao
+            statement.setInt(7, porco.getCuidador().getIdCuidador()); // Supondo que Porco tenha uma referência para Cuidador
+            statement.setInt(8, porco.getVivedouro().getIdVivedouro()); // Supondo que Porco tenha uma referência para Vivedouro
 
             statement.executeUpdate();
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                porco.setIdAnimal(generatedKeys.getInt(1));
+            }
         }
     }
 
-    // Método para recuperar todos os Porcos do banco de dados
-    public List<Porco> listarPorcos() throws SQLException {
+
+    public List<Porco> listarPorcosComRelacoes() throws SQLException {
         List<Porco> porcos = new ArrayList<>();
-        String query = "SELECT * FROM Porco";
+        String query = "SELECT Porco.idAnimal, Porco.sexo, Porco.peso, Porco.idade, Porco.raca, Porco.vendido, " +
+                "Medicacao.idMedicacao, Medicacao.nomeMedicacao, Medicacao.mlPorKg, " +
+                "Cuidador.idCuidador, Cuidador.salario, Cuidador.profissao, Cuidador.nome, Cuidador.telefone, Cuidador.cpf, " +
+                "Vivedouro.idVivedouro, Vivedouro.vivedouro, Vivedouro.tamanho " +
+                "FROM Porco " +
+                "LEFT JOIN Medicacao ON Porco.idVacina = Medicacao.idMedicacao " +
+                "LEFT JOIN Cuidador ON Porco.idCuidador = Cuidador.idCuidador " +
+                "LEFT JOIN Vivedouro ON Porco.idVivedouro = Vivedouro.idVivedouro";
+
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
@@ -43,16 +58,37 @@ public class PorcoDAO {
                 porco.setPeso(resultSet.getString("peso"));
                 porco.setIdade(resultSet.getInt("idade"));
                 porco.setRaca(resultSet.getString("raca"));
-                porco.setIdVacina(resultSet.getInt("idVacina"));
-                porco.setIdCuidador(resultSet.getInt("idCuidador"));
-                porco.setIdVivedouro(resultSet.getInt("idVivedouro"));
                 porco.setVendido(resultSet.getBoolean("vendido"));
+
+                Medicacao medicacao = new Medicacao();
+                medicacao.setIdMedicacao(resultSet.getInt("idMedicacao"));
+                medicacao.setNomeMedicacao(resultSet.getString("nomeMedicacao"));
+                medicacao.setMlPorKg(resultSet.getFloat("mlPorKg"));
+
+                Cuidador cuidador = new Cuidador();
+                cuidador.setIdCuidador(resultSet.getInt("idCuidador"));
+                cuidador.setSalario(resultSet.getFloat("salario"));
+                cuidador.setProfissao(resultSet.getString("profissao"));
+                cuidador.setNome(resultSet.getString("nome"));
+                cuidador.setTelefone(resultSet.getString("telefone"));
+                cuidador.setCpf(resultSet.getString("cpf"));
+
+                Vivedouro vivedouro = new Vivedouro();
+                vivedouro.setIdVivedouro(resultSet.getInt("idVivedouro"));
+                vivedouro.setVivedouro(resultSet.getString("vivedouro"));
+                vivedouro.setTamanho(resultSet.getString("tamanho"));
+
+                porco.setMedicacao(medicacao);
+                porco.setCuidador(cuidador);
+                porco.setVivedouro(vivedouro);
 
                 porcos.add(porco);
             }
         }
         return porcos;
     }
+
+
     public void excluirPorco(int id) throws SQLException {
         String query = "DELETE FROM Porco WHERE idAnimal = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
@@ -60,22 +96,18 @@ public class PorcoDAO {
             statement.executeUpdate();
         }
     }
+
     public void editarPorco(Porco porco) throws SQLException {
-        String query = "UPDATE Porco SET sexo = ?, peso = ?, idade = ?, raca = ?, idVacina = ?, idCuidador = ?, idVivedouro = ?, vendido = ? WHERE idAnimal = ?";
+        String query = "UPDATE Porco SET sexo = ?, peso = ?, idade = ?, raca = ?, vendido = ? WHERE idAnimal = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, porco.getSexo());
             statement.setString(2, porco.getPeso());
             statement.setInt(3, porco.getIdade());
             statement.setString(4, porco.getRaca());
-            statement.setInt(5, porco.getIdVacina());
-            statement.setInt(6, porco.getIdCuidador());
-            statement.setInt(7, porco.getIdVivedouro());
-            statement.setBoolean(8, porco.isVendido());
-            statement.setInt(9, porco.getIdAnimal());
+            statement.setBoolean(5, porco.isVendido());
+            statement.setInt(6, porco.getIdAnimal());
 
             statement.executeUpdate();
         }
     }
-
-
 }

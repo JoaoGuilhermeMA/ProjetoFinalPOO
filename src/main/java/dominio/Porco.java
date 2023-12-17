@@ -6,16 +6,12 @@ public class Porco {
     private String peso;
     private int idade;
     private String raca;
-    private int idVacina;
-    private int idCuidador;
-    private int idVivedouro;
     private boolean vendido;
 
-    // Construtor vazio
-    public Porco() {
-    }
+    private Medicacao medicacao;
+    private Cuidador cuidador;
+    private Vivedouro vivedouro;
 
-    // Getters e Setters
     public int getIdAnimal() {
         return idAnimal;
     }
@@ -56,35 +52,35 @@ public class Porco {
         this.raca = raca;
     }
 
-    public int getIdVacina() {
-        return idVacina;
-    }
-
-    public void setIdVacina(int idVacina) {
-        this.idVacina = idVacina;
-    }
-
-    public int getIdCuidador() {
-        return idCuidador;
-    }
-
-    public void setIdCuidador(int idCuidador) {
-        this.idCuidador = idCuidador;
-    }
-
-    public int getIdVivedouro() {
-        return idVivedouro;
-    }
-
-    public void setIdVivedouro(int idVivedouro) {
-        this.idVivedouro = idVivedouro;
-    }
-
     public boolean isVendido() {
         return vendido;
     }
 
     public void setVendido(boolean vendido) {
         this.vendido = vendido;
+    }
+
+    public Medicacao getMedicacao() {
+        return medicacao;
+    }
+
+    public void setMedicacao(Medicacao medicacao) {
+        this.medicacao = medicacao;
+    }
+
+    public Cuidador getCuidador() {
+        return cuidador;
+    }
+
+    public void setCuidador(Cuidador cuidador) {
+        this.cuidador = cuidador;
+    }
+
+    public Vivedouro getVivedouro() {
+        return vivedouro;
+    }
+
+    public void setVivedouro(Vivedouro vivedouro) {
+        this.vivedouro = vivedouro;
     }
 }

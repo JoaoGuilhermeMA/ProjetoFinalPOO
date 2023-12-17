@@ -57,4 +57,11 @@ public class Cuidador {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public String toString() {
+        return nome != null ? nome : "Nome não disponível";
+        // Ou, se desejar mostrar mais informações:
+        // return nomeMedicacao + " - " + mlPorKg + " ml/Kg";
+    }
 }

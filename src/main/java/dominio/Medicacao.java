@@ -28,4 +28,11 @@ public class Medicacao {
     public void setMlPorKg(float mlPorKg) {
         this.mlPorKg = mlPorKg;
     }
+
+    @Override
+    public String toString() {
+        return nomeMedicacao != null ? nomeMedicacao : "Nome não disponível";
+        // Ou, se desejar mostrar mais informações:
+        // return nomeMedicacao + " - " + mlPorKg + " ml/Kg";
+    }
 }

@@ -28,4 +28,11 @@ public class Vivedouro {
     public void setTamanho(String tamanho) {
         this.tamanho = tamanho;
     }
+
+    @Override
+    public String toString() {
+        return vivedouro != null ? vivedouro : "Nome não disponível";
+        // Ou, se desejar mostrar mais informações:
+        // return nomeMedicacao + " - " + mlPorKg + " ml/Kg";
+    }
 }

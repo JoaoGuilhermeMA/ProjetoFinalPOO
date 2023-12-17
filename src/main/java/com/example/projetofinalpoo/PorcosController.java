@@ -1,34 +1,80 @@
 package com.example.projetofinalpoo;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+import persistencia.Conexao;
+import persistencia.PorcoDAO;
+import dominio.Porco;
 
 public class PorcosController {
+
     @FXML
-    private TableView<?> tabelaPorcos;
+    private TableView<Porco> tabelaPorcos;
+
     @FXML
-    private TableColumn<?, ?> idade;
+    private TableColumn<Porco, Integer> idPorco;
+
     @FXML
-    private TableColumn<?, ?> vivedouro;
+    private TableColumn<Porco, Integer> idade;
+
     @FXML
-    private TableColumn<?, ?> peso;
+    private TableColumn<Porco, String> vivedouro;
+
     @FXML
-    private TableColumn<?, ?> vacinas;
+    private TableColumn<Porco, Double> peso;
+
     @FXML
-    private TableColumn<?, ?> raca;
+    private TableColumn<Porco, String> vacinas;
+
     @FXML
-    private TableColumn<?, ?> idPorco;
+    private TableColumn<Porco, String> raca;
+
     @FXML
-    private TableColumn<?, ?> cuidador;
+    private TableColumn<Porco, String> cuidador;
+
     @FXML
-    private TableColumn<?, ?> sexo;
+    private TableColumn<Porco, String> sexo;
+
+    Conexao conexao = new Conexao();
+    PorcoDAO porcoDAO = new PorcoDAO(conexao.getConexao());
+
+    public void initialize() {
+        configurarTableView();
+        carregarDadosNaTableView();
+    }
+
+    private void configurarTableView() {
+        idPorco.setCellValueFactory(new PropertyValueFactory<>("idAnimal"));
+        idade.setCellValueFactory(new PropertyValueFactory<>("idade"));
+        vivedouro.setCellValueFactory(new PropertyValueFactory<>("vivedouro"));
+        peso.setCellValueFactory(new PropertyValueFactory<>("peso"));
+        vacinas.setCellValueFactory(new PropertyValueFactory<>("medicacao"));
+        raca.setCellValueFactory(new PropertyValueFactory<>("raca"));
+        cuidador.setCellValueFactory(new PropertyValueFactory<>("cuidador"));
+        sexo.setCellValueFactory(new PropertyValueFactory<>("sexo"));
+    }
+
+    private void carregarDadosNaTableView() {
+        try {
+            List<Porco> listaPorcos = porcoDAO.listarPorcosComRelacoes();
+            ObservableList<Porco> listaObservable = FXCollections.observableArrayList(listaPorcos);
+            tabelaPorcos.setItems(listaObservable);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void adicionarPorco(ActionEvent event) throws IOException {
