@@ -12,13 +12,13 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.FuncionarioController">
    <children>
-      <TableView fx:id="tableViewCuidadores" layoutX="67.0" layoutY="100.0" prefHeight="486.0" prefWidth="867.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="100.0">
+      <TableView fx:id="tableViewCuidadores" layoutX="46.0" layoutY="99.0" prefHeight="486.0" prefWidth="910.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="99.0">
         <columns>
           <TableColumn fx:id="colunaID" prefWidth="37.0" text="ID" />
-          <TableColumn fx:id="colunaNome" prefWidth="391.0" text="NOME" />
-            <TableColumn fx:id="colunaSalario" minWidth="0.0" prefWidth="139.0" text="SALÁRIO" />
-            <TableColumn fx:id="colunaProfissao" minWidth="1.0" prefWidth="175.0" text="PROFISSÃO" />
-            <TableColumn fx:id="colunaTelefone" prefWidth="124.0" text="TELEFONE" />
+          <TableColumn fx:id="colunaNome" prefWidth="315.0" text="NOME" />
+            <TableColumn fx:id="colunaSalario" minWidth="0.0" prefWidth="114.0" text="SALÁRIO" />
+            <TableColumn fx:id="colunaProfissao" minWidth="1.0" prefWidth="178.0" text="PROFISSÃO" />
+            <TableColumn fx:id="colunaTelefone" prefWidth="127.0" text="TELEFONE" />
         </columns>
       </TableView>
       <Button fx:id="adicionar" layoutX="916.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarFuncionario" text="+">

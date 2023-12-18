@@ -1,5 +1,6 @@
 package com.example.projetofinalpoo;
 
+import dominio.Cuidador;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,8 +9,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import persistencia.Conexao;
 import persistencia.VivedouroDAO;
@@ -49,6 +53,48 @@ public class VivedouroController {
         idVivedouro.setCellValueFactory(new PropertyValueFactory<>("idVivedouro"));
         tipoVivedouro.setCellValueFactory(new PropertyValueFactory<>("vivedouro"));
         tamanho.setCellValueFactory(new PropertyValueFactory<>("tamanho"));
+        TableColumn<Vivedouro, Void> colunaBotoes = new TableColumn<>("");
+        colunaBotoes.setCellFactory(param -> new TableCell<>() {
+            private final Button deleteButton = new Button("Excluir");
+            private final Button editButton = new Button("Editar");
+
+            {
+                deleteButton.setStyle(
+                        "-fx-cursor: hand ;"
+                                + "-fx-font-size: 14px;"
+                                + "-fx-background-color: #ff1744;"
+                                + "-fx-text-fill: white;"
+                );
+
+                editButton.setStyle(
+                        "-fx-cursor: hand ;"
+                                + "-fx-font-size: 14px;"
+                                + "-fx-background-color: #00E676;"
+                                + "-fx-text-fill: white;"
+                );
+
+                deleteButton.setOnMouseClicked(this::handleDeleteButtonClick);
+                editButton.setOnMouseClicked(this::handleEditButtonClick);
+
+                HBox managebtn = new HBox(editButton, deleteButton);
+                managebtn.setStyle("-fx-alignment:center");
+                HBox.setMargin(deleteButton, new javafx.geometry.Insets(2, 2, 0, 3));
+                HBox.setMargin(editButton, new javafx.geometry.Insets(2, 3, 0, 2));
+
+                setGraphic(managebtn);
+                setText(null);
+            }
+
+            private void handleDeleteButtonClick(MouseEvent event) {
+                System.out.println("Excluindo");
+            }
+
+            private void handleEditButtonClick(MouseEvent event) {
+                System.out.println("Editando");
+            }
+        });
+
+        tabelaVivedouro.getColumns().add(colunaBotoes);
     }
 
     private void carregarDadosNaTableView() {

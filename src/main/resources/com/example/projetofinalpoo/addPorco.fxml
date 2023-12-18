@@ -59,7 +59,7 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Label layoutX="95.0" layoutY="408.0" text="MEDICAÇÃO">
+      <Label layoutX="97.0" layoutY="410.0" text="MEDICAÇÃO">
          <font>
             <Font size="24.0" />
          </font></Label>
@@ -67,11 +67,11 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Label layoutX="497.0" layoutY="408.0" text="CUIDADOR">
+      <Label layoutX="499.0" layoutY="410.0" text="CUIDADOR">
          <font>
             <Font size="24.0" />
          </font></Label>
-      <ChoiceBox fx:id="selectMedicacao" layoutX="239.0" layoutY="413.0" prefHeight="25.0" prefWidth="238.0">
+      <ChoiceBox fx:id="selectMedicacao" layoutX="241.0" layoutY="415.0" prefHeight="25.0" prefWidth="238.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ChoiceBox>
@@ -80,7 +80,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <ChoiceBox fx:id="selectCuidador" layoutX="630.0" layoutY="411.0" prefHeight="25.0" prefWidth="255.0">
+      <ChoiceBox fx:id="selectCuidador" layoutX="632.0" layoutY="413.0" prefHeight="25.0" prefWidth="272.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

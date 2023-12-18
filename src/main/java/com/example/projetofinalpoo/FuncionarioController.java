@@ -8,8 +8,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import persistencia.Conexao;
 import javafx.scene.control.TableView;
@@ -23,20 +27,14 @@ public class FuncionarioController {
 
     @FXML
     private TableColumn<?, ?> colunaID;
-
     @FXML
     private TableColumn<?, ?> colunaNome;
-
     @FXML
     private TableColumn<?, ?> colunaProfissao;
-
     @FXML
     private TableColumn<?, ?> colunaSalario;
-
     @FXML
     private TableColumn<?, ?> colunaTelefone;
-
-
     @FXML
     private TableView<Cuidador> tableViewCuidadores;
 
@@ -56,7 +54,51 @@ public class FuncionarioController {
         colunaProfissao.setCellValueFactory(new PropertyValueFactory<>("profissao"));
         colunaSalario.setCellValueFactory(new PropertyValueFactory<>("salario"));
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
+
+        TableColumn<Cuidador, Void> colunaBotoes = new TableColumn<>("");
+        colunaBotoes.setCellFactory(param -> new TableCell<>() {
+            private final Button deleteButton = new Button("Excluir");
+            private final Button editButton = new Button("Editar");
+
+            {
+                deleteButton.setStyle(
+                        "-fx-cursor: hand ;"
+                        + "-fx-font-size: 14px;"
+                        + "-fx-background-color: #ff1744;"
+                        + "-fx-text-fill: white;"
+                );
+
+                editButton.setStyle(
+                        "-fx-cursor: hand ;"
+                        + "-fx-font-size: 14px;"
+                        + "-fx-background-color: #00E676;"
+                        + "-fx-text-fill: white;"
+                );
+
+                deleteButton.setOnMouseClicked(this::handleDeleteButtonClick);
+                editButton.setOnMouseClicked(this::handleEditButtonClick);
+
+                HBox managebtn = new HBox(editButton, deleteButton);
+                managebtn.setStyle("-fx-alignment:center");
+                HBox.setMargin(deleteButton, new javafx.geometry.Insets(2, 2, 0, 3));
+                HBox.setMargin(editButton, new javafx.geometry.Insets(2, 3, 0, 2));
+
+                setGraphic(managebtn);
+                setText(null);
+            }
+
+            private void handleDeleteButtonClick(MouseEvent event) {
+                System.out.println("Excluindo");
+            }
+
+            private void handleEditButtonClick(MouseEvent event) {
+                System.out.println("Editando");
+            }
+        });
+
+        tableViewCuidadores.getColumns().add(colunaBotoes);
     }
+
 
     private void carregarDadosNaTableView() {
         try {
@@ -64,7 +106,6 @@ public class FuncionarioController {
             ObservableList<Cuidador> listaObservable = FXCollections.observableArrayList(listaCuidadores);
             tableViewCuidadores.setItems(listaObservable);
         } catch (SQLException e) {
-            // Lidar com exceções
             e.printStackTrace();
         }
     }

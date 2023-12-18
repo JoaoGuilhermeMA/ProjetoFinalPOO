@@ -29,7 +29,6 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
     -fx-background-radius: 10px;
     -fx-min-height: 486px;
-    -fx-max-width: 936px;
     -fx-max-height: 486px;
 }
 

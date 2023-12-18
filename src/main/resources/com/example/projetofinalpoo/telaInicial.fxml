@@ -16,7 +16,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="721.0" layoutX="-27.0" layoutY="-268.0" stroke="BLACK" strokeType="INSIDE" width="308.0" />
          </children>
       </AnchorPane>
-      <Button fx:id="btnPorcos" layoutX="296.0" layoutY="155.0" mnemonicParsing="false" onAction="#telaPorcos" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="ANIMAIS" textFill="WHITE">
+      <Button fx:id="btnPorcos" layoutX="345.0" layoutY="155.0" mnemonicParsing="false" onAction="#telaPorcos" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="ANIMAIS" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
@@ -24,7 +24,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnFuncionario" layoutX="296.0" layoutY="364.0" mnemonicParsing="false" onAction="#telaFuncionarios" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="FUNCIONÁRIOS" textFill="#f2f2f2">
+      <Button fx:id="btnFuncionario" layoutX="345.0" layoutY="364.0" mnemonicParsing="false" onAction="#telaFuncionarios" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="FUNCIONÁRIOS" textFill="#f2f2f2">
          <font>
             <Font size="36.0" />
          </font>
@@ -32,7 +32,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnVendas" layoutX="295.0" layoutY="262.0" mnemonicParsing="false" onAction="#telaVendas" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VENDAS" textFill="WHITE">
+      <Button fx:id="btnVendas" layoutX="344.0" layoutY="262.0" mnemonicParsing="false" onAction="#telaVendas" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VENDAS" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
@@ -40,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnMedicacao" layoutX="296.0" layoutY="469.0" mnemonicParsing="false" onAction="#telaMedicacao" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="MEDICAÇÕES" textFill="#f2f2f2">
+      <Button fx:id="btnMedicacao" layoutX="345.0" layoutY="469.0" mnemonicParsing="false" onAction="#telaMedicacao" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="MEDICAÇÕES" textFill="#f2f2f2">
          <font>
             <Font size="36.0" />
          </font>
@@ -55,7 +55,7 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9a5071" height="737.0" layoutX="811.0" layoutY="-195.0" rotate="140.0" stroke="BLACK" strokeType="INSIDE" width="305.0" />
-      <Button fx:id="btnVivedouro" layoutX="296.0" layoutY="577.0" mnemonicParsing="false" onAction="#telaVivedouro" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VIVEDOURO" textFill="#f2f2f2">
+      <Button fx:id="btnVivedouro" layoutX="345.0" layoutY="577.0" mnemonicParsing="false" onAction="#telaVivedouro" prefHeight="77.0" prefWidth="305.0" style="-fx-background-radius: 15px; -fx-background-color: #2f3559;" text="VIVEDOURO" textFill="#f2f2f2">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
