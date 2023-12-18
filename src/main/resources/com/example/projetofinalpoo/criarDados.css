@@ -2,12 +2,25 @@
     -fx-background-color:  #e6d8cb;
 }
 
-#voltarPorco{
+#voltar{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
     -fx-background-image: url('desfazer.png');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
-    -fx-background-size: 21px 21px;
+    -fx-background-size: 24px 24px;
     -fx-text-fill: transparent;
     -fx-border-radius: 30px;
 }
 
+#salvarDados{
+    -fx-border-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-background-color: white;
+}
+
+.text-field, .choice-box {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+    -fx-background-color: #e6d8cb;
+}

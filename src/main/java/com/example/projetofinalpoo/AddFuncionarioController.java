@@ -4,12 +4,17 @@ import dominio.Cuidador;
 import dominio.Medicacao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import persistencia.Conexao;
 import persistencia.CuidadoDAO;
 import persistencia.MedicacaoDAO;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class AddFuncionarioController {
@@ -44,5 +49,15 @@ public class AddFuncionarioController {
         cud.setSalario(salario);
         cudDAO.adicionarCuidador(cud);
         conexao.fecharConexao();
+    }
+
+    @FXML
+    void voltarFuncionario(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloController.class.getResource("funcionario.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+        scene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/tableView.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
     }
 }

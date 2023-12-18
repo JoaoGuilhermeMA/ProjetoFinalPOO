@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -8,69 +13,90 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddPorcoController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddPorcoController">
    <children>
-      <Button fx:id="salvarDados" layoutX="657.0" layoutY="583.0" mnemonicParsing="false" onAction="#onClickCadastrar" text="Cadastrar">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-      <TextField fx:id="campoRaca" layoutX="402.0" layoutY="217.0" prefHeight="25.0" prefWidth="181.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <TextField fx:id="campoIdade" layoutX="335.0" layoutY="289.0" prefHeight="25.0" prefWidth="49.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <TextField fx:id="campoPeso" layoutX="563.0" layoutY="289.0" prefHeight="25.0" prefWidth="91.0">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor></TextField>
-      <Label layoutX="87.0" layoutY="212.0" text="SEXO">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="332.0" layoutY="212.0" text="RAÇA">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="255.0" layoutY="284.0" text="IDADE">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="500.0" layoutY="284.0" text="PESO">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="151.0" layoutY="363.0" text="MEDICAÇÃO">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="609.0" layoutY="212.0" text="VIVEDOURO">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <Label layoutX="514.0" layoutY="363.0" text="CUIDADOR">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <ChoiceBox fx:id="selectMedicacao" layoutX="293.0" layoutY="366.0" prefHeight="25.0" prefWidth="188.0" />
-      <ChoiceBox fx:id="selectVivedouro" layoutX="750.0" layoutY="215.0" prefHeight="25.0" prefWidth="169.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ChoiceBox>
-      <ChoiceBox fx:id="selectCuidador" layoutX="647.0" layoutY="366.0" prefHeight="25.0" prefWidth="188.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ChoiceBox>
-      <Button fx:id="voltarPorco" layoutX="158.0" layoutY="583.0" mnemonicParsing="false" onAction="#voltarPorco" text="+">
+      <Button fx:id="salvarDados" layoutX="676.0" layoutY="581.0" mnemonicParsing="false" onAction="#onClickCadastrar" text="Cadastrar">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="campoRaca" layoutX="372.0" layoutY="261.0" prefHeight="30.0" prefWidth="213.0" promptText="Digite a raça">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="campoIdade" layoutX="358.0" layoutY="335.0" prefHeight="30.0" prefWidth="68.0" promptText="Digite a idade">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="campoPeso" layoutX="586.0" layoutY="335.0" prefHeight="25.0" prefWidth="91.0" promptText="Digite o peso">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="61.0" layoutY="258.0" text="SEXO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="302.0" layoutY="258.0" text="RAÇA">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="278.0" layoutY="332.0" text="IDADE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="523.0" layoutY="332.0" text="PESO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="95.0" layoutY="408.0" text="MEDICAÇÃO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="599.0" layoutY="258.0" text="VIVEDOURO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="497.0" layoutY="408.0" text="CUIDADOR">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ChoiceBox fx:id="selectMedicacao" layoutX="239.0" layoutY="413.0" prefHeight="25.0" prefWidth="238.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <ChoiceBox fx:id="selectVivedouro" layoutX="740.0" layoutY="261.0" prefHeight="25.0" prefWidth="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <ChoiceBox fx:id="selectCuidador" layoutX="630.0" layoutY="411.0" prefHeight="25.0" prefWidth="255.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ChoiceBox>
+      <Button fx:id="voltar" layoutX="177.0" layoutY="581.0" mnemonicParsing="false" onAction="#voltarPorco" text="+">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <ChoiceBox fx:id="selectSexo" layoutX="155.0" layoutY="217.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="selectSexo" layoutX="129.0" layoutY="263.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
       <Label layoutX="268.0" layoutY="79.0" text="Cadastrar Porco">
          <font>
             <Font name="Bauhaus 93" size="64.0" />
@@ -78,6 +104,6 @@
       </Label>
    </children>
    <cursor>
-      <Cursor fx:constant="HAND" />
+      <Cursor fx:constant="DEFAULT" />
    </cursor>
 </AnchorPane>

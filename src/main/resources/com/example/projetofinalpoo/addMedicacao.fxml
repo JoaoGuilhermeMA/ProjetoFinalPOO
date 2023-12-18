@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -10,10 +12,47 @@
 
 <AnchorPane minHeight="700.0" minWidth="100.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddMedicacaoController">
    <children>
-      <Button fx:id="salvarDados" layoutX="459.0" layoutY="408.0" mnemonicParsing="false" onAction="#onCLickButtonCadastrar" text="Cadastrar" />
-      <Label layoutX="164.0" layoutY="177.0" text="Name" />
-      <TextField fx:id="labelMedName" layoutX="203.0" layoutY="173.0" promptText="Nome da medicação" />
-      <TextField fx:id="labelMedQntd" layoutX="203.0" layoutY="210.0" promptText="ML por KG" />
-      <Label layoutX="164.0" layoutY="214.0" text="Name" />
+      <Button fx:id="salvarDados" layoutX="676.0" layoutY="581.0" mnemonicParsing="false" onAction="#onCLickButtonCadastrar" text="Cadastrar">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="144.0" layoutY="315.0" text="MEDICAÇÃO">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField fx:id="labelMedName" layoutX="297.0" layoutY="313.0" prefHeight="30.0" prefWidth="203.0" promptText="Nome da medicação">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="labelMedQntd" layoutX="708.0" layoutY="312.0" prefHeight="30.0" prefWidth="149.0" promptText="ML por KG">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Label layoutX="540.0" layoutY="314.0" text="QUANTIDADE">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="voltar" layoutX="177.0" layoutY="581.0" mnemonicParsing="false" onAction="#voltarMedicacao" text="+">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="187.0" layoutY="79.0" text="Cadastrar Medicação">
+         <font>
+            <Font name="Bauhaus 93" size="64.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

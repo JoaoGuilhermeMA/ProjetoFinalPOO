@@ -9,15 +9,19 @@
     -fx-background-size: 22px 22px;
     -fx-text-fill: transparent;
     -fx-border-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-background-color: white;
 }
 
 #voltar{
     -fx-background-image: url('desfazer.png');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
-    -fx-background-size: 20px 20px;
+    -fx-background-size: 22px 22px;
     -fx-text-fill: transparent;
     -fx-border-radius: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-background-color: white;
 }
 
 .table-view {

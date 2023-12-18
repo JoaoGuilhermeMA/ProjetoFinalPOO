@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,11 +11,85 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddFuncionarioController">
    <children>
-      <TextField fx:id="labelTelefone" layoutX="217.0" layoutY="188.0" promptText="Telefone" />
-      <TextField fx:id="labelCPF" layoutX="217.0" layoutY="148.0" promptText="CPF" />
-      <TextField fx:id="labelNome" layoutX="217.0" layoutY="114.0" promptText="Nome" />
-      <TextField fx:id="labelProfissao" layoutX="217.0" layoutY="230.0" promptText="Profissão" />
-      <TextField fx:id="labelSalario" layoutX="217.0" layoutY="268.0" promptText="Salario" />
-      <Button fx:id="salvarDados" layoutX="447.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickCadastrar" text="Cadastrar" />
+      <TextField fx:id="labelTelefone" layoutX="344.0" layoutY="331.0" prefHeight="37.0" prefWidth="160.0" promptText="Digite o telefone">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="labelCPF" layoutX="593.0" layoutY="331.0" prefHeight="37.0" prefWidth="160.0" promptText="Digite o CPF">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="labelNome" layoutX="371.0" layoutY="242.0" prefHeight="37.0" prefWidth="349.0" promptText="Digite o nome">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="labelProfissao" layoutX="251.0" layoutY="422.0" promptText="Digite a profissão">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TextField fx:id="labelSalario" layoutX="723.0" layoutY="422.0" prefHeight="37.0" prefWidth="133.0" promptText="Digite o salário">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <Button fx:id="salvarDados" layoutX="676.0" layoutY="581.0" mnemonicParsing="false" onAction="#clickCadastrar" text="Cadastrar">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="288.0" layoutY="243.0" text="NOME">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="544.0" layoutY="332.0" text="CPF">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="332.0" text="TELEFONE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="423.0" text="PROFISSÃO">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="490.0" layoutY="423.0" text="SALÁRIO A RECEBER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="voltar" layoutX="177.0" layoutY="581.0" mnemonicParsing="false" onAction="#voltarFuncionario" text="+">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="181.0" layoutY="79.0" text="Cadastrar Funcionário">
+         <font>
+            <Font name="Bauhaus 93" size="64.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
