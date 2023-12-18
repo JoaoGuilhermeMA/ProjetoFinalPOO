@@ -93,10 +93,8 @@ public class EditFuncionarioController {
         );
         alert.showAndWait();
 
-        // Obtém a janela atual
-        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        // Dá um intervalo para fechar a página e voltar para a anterior
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Platform.runLater(() -> {
             Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
                 currentStage.close();

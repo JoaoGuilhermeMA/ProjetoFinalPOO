@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
@@ -69,8 +70,20 @@ public class MedicacaoController {
                                 + "-fx-text-fill: white;"
                 );
 
-                deleteButton.setOnMouseClicked(this::handleDeleteButtonClick);
-                editButton.setOnMouseClicked(this::handleEditButtonClick);
+                deleteButton.setOnMouseClicked(event -> {
+                    try {
+                        deleteButton(event);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+                editButton.setOnMouseClicked(event -> {
+                    try {
+                        editButton(event);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
 
                 HBox managebtn = new HBox(editButton, deleteButton);
                 managebtn.setStyle("-fx-alignment:center");
@@ -81,12 +94,33 @@ public class MedicacaoController {
                 setText(null);
             }
 
-            private void handleDeleteButtonClick(MouseEvent event) {
-                System.out.println("Excluindo");
-            }
+            private void deleteButton(MouseEvent event) throws SQLException {
+                Medicacao medicacao = getTableView().getItems().get(getIndex());
 
-            private void handleEditButtonClick(MouseEvent event) {
-                System.out.println("Editando");
+                ObservableList<Medicacao> listaObservable = tabelaMedicacao.getItems();
+                listaObservable.remove(medicacao);
+                tabelaMedicacao.setItems(listaObservable);
+                Conexao conexao = new Conexao();
+                medicacaoDAO.excluirMedicacao(medicacao.getIdMedicacao());
+                conexao.fecharConexao();
+            }
+            private void editButton(MouseEvent event) throws IOException {
+
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Medicacao medicacao = getTableView().getItems().get(getIndex());
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("editMedicacao.fxml"));
+                Parent root = loader.load();
+
+                EditMedicacaoController editMedicacao = loader.getController();
+                editMedicacao.editarMedicacao(medicacao);
+
+                Scene editScene = new Scene(root);
+                editScene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/criarDados.css").toExternalForm());
+                Stage stage = new Stage();
+                stage.setScene(editScene);
+                stage.setOnShown(e -> currentStage.close());
+                stage.show();
             }
         });
 

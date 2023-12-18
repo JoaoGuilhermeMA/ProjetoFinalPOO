@@ -7,10 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.EditMedicacaoController">
    <children>
-      <Button layoutX="203.0" layoutY="581.0" mnemonicParsing="false" text="+">
+      <Button fx:id="voltar" layoutX="203.0" layoutY="581.0" mnemonicParsing="false" onAction="#voltarMedicacao" text="+">
          <font>
             <Font size="24.0" />
          </font>
@@ -18,7 +17,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="702.0" layoutY="581.0" mnemonicParsing="false" text="Salvar">
+      <Button fx:id="salvarDados" layoutX="702.0" layoutY="581.0" mnemonicParsing="false" onAction="#clickAlterar" text="Salvar">
          <font>
             <Font size="24.0" />
          </font>
@@ -41,7 +40,7 @@
             <Font name="Bauhaus 93" size="64.0" />
          </font>
       </Label>
-      <TextField layoutX="297.0" layoutY="315.0" prefWidth="203.0" promptText="Digite a medicação">
+      <TextField fx:id="nomeMedicacao" layoutX="297.0" layoutY="315.0" prefWidth="203.0" promptText="Digite a medicação">
          <font>
             <Font size="16.0" />
          </font>
@@ -49,7 +48,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="708.0" layoutY="315.0" prefWidth="149.0" promptText="ML por KG">
+      <TextField fx:id="quantidadeMedicacao" layoutX="708.0" layoutY="315.0" prefWidth="149.0" promptText="ML por KG">
          <font>
             <Font size="16.0" />
          </font>
