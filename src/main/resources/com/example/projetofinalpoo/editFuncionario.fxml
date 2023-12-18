@@ -9,7 +9,7 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.EditFuncionarioController">
    <children>
-      <Button fx:id="salvarDados" layoutX="756.0" layoutY="592.0" mnemonicParsing="false" text="Salvar">
+      <Button fx:id="salvarDados" layoutX="756.0" layoutY="592.0" mnemonicParsing="false" onAction="#clickAlterar" text="Salvar">
          <font>
             <Font size="24.0" />
          </font>
@@ -17,7 +17,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="voltar" layoutX="236.0" layoutY="592.0" mnemonicParsing="false" text="+">
+      <Button fx:id="voltar" layoutX="236.0" layoutY="592.0" mnemonicParsing="false" onAction="#voltarFuncionario" text="+">
          <font>
             <Font size="24.0" />
          </font>
@@ -25,7 +25,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="251.0" layoutY="422.0" promptText="Digite a profissão">
+      <TextField fx:id="profissaoFunc" layoutX="251.0" layoutY="422.0" promptText="Digite a profissão">
          <font>
             <Font size="14.0" />
          </font>
@@ -33,7 +33,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="723.0" layoutY="423.0" prefWidth="133.0" promptText="Digite o salário">
+      <TextField fx:id="salarioFunc" layoutX="723.0" layoutY="423.0" prefWidth="133.0" promptText="Digite o salário">
          <font>
             <Font size="14.0" />
          </font>
@@ -41,7 +41,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="344.0" layoutY="332.0" prefHeight="30.0" prefWidth="160.0" promptText="Digite o telefone">
+      <TextField fx:id="telefoneFunc" layoutX="344.0" layoutY="332.0" prefHeight="30.0" prefWidth="160.0" promptText="Digite o telefone">
          <font>
             <Font size="14.0" />
          </font>
@@ -49,7 +49,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="593.0" layoutY="332.0" prefWidth="160.0" promptText="Digite o CPF">
+      <TextField fx:id="cpfFunc" layoutX="593.0" layoutY="332.0" prefWidth="160.0" promptText="Digite o CPF">
          <font>
             <Font size="14.0" />
          </font>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="371.0" layoutY="243.0" prefWidth="349.0" promptText="Digite o nome">
+      <TextField fx:id="nomeFunc" layoutX="371.0" layoutY="243.0" prefWidth="349.0" promptText="Digite o nome">
          <font>
             <Font size="14.0" />
          </font>
