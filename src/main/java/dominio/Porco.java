@@ -83,4 +83,8 @@ public class Porco {
     public void setVivedouro(Vivedouro vivedouro) {
         this.vivedouro = vivedouro;
     }
+
+    public void setAtivo(boolean b) {
+        this.vendido = b;
+    }
 }

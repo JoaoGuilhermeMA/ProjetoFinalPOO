@@ -97,6 +97,7 @@ public class EditPorcoController {
     void clickAlterar(ActionEvent event) throws SQLException, IOException {
         Conexao conexao = new Conexao();
         PorcoDAO porcoDAO = new PorcoDAO(conexao.getConexao());
+
         porcoEditar.setIdade(Integer.parseInt(campoIdade.getText()));
         porcoEditar.setPeso(campoPeso.getText());
         porcoEditar.setRaca(campoRaca.getText());
@@ -115,22 +116,16 @@ public class EditPorcoController {
             AddVenda addVendaController = loader.getController();
             addVendaController.setPorcoId(porcoEditar); // Configura o ID do Porco
 
-            Scene scene = new Scene(root);
+            Scene editScene = new Scene(root);
+            editScene.getStylesheets().add(getClass().getResource("/com/example/projetofinalpoo/criarDados.css").toExternalForm());
             Stage stage = new Stage();
-            stage.setScene(scene);
+            stage.setScene(editScene);
             stage.show();
-
-            VendidosDAO vendidosDAO = new VendidosDAO(conexao.getConexao());
 
             Vendidos venda = new Vendidos();
             venda.setIdAnimal(porcoEditar.getIdAnimal());
-
-            vendidosDAO.adicionarVenda(venda);
-
             conexao.fecharConexao();
-        } else {
 
-            System.out.println("O CheckBox não está marcado. A atualização não será realizada.");
         }
         porcoDAO.editarPorco(porcoEditar);
 

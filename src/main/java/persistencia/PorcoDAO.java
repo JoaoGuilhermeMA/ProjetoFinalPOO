@@ -38,7 +38,7 @@ public class PorcoDAO {
     }
 
 
-    public List<Porco> listarPorcosComRelacoes() throws SQLException {
+    public List<Porco> listarPorcosAtivos() throws SQLException {
         List<Porco> porcos = new ArrayList<>();
         String query = "SELECT Porco.idAnimal, Porco.sexo, Porco.peso, Porco.idade, Porco.raca, Porco.vendido, " +
                 "Medicacao.idMedicacao, Medicacao.nomeMedicacao, Medicacao.mlPorKg, " +
@@ -47,7 +47,8 @@ public class PorcoDAO {
                 "FROM Porco " +
                 "LEFT JOIN Medicacao ON Porco.idVacina = Medicacao.idMedicacao " +
                 "LEFT JOIN Cuidador ON Porco.idCuidador = Cuidador.idCuidador " +
-                "LEFT JOIN Vivedouro ON Porco.idVivedouro = Vivedouro.idVivedouro";
+                "LEFT JOIN Vivedouro ON Porco.idVivedouro = Vivedouro.idVivedouro " +
+                "WHERE Porco.ativo = TRUE"; // Filtra porcos ativos
 
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(query);
@@ -84,9 +85,13 @@ public class PorcoDAO {
 
                 porcos.add(porco);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new SQLException("Erro ao listar porcos ativos.", e);
         }
         return porcos;
     }
+
 
 
     public void excluirPorco(int id) throws SQLException {
@@ -107,6 +112,15 @@ public class PorcoDAO {
             statement.setBoolean(5, porco.isVendido());
             statement.setInt(6, porco.getIdAnimal());
 
+            statement.executeUpdate();
+        }
+    }
+
+    public void atualizarStatusVendaPorco(int idPorco, boolean vendido) throws SQLException {
+        String query = "UPDATE Porco SET ativo = ? WHERE idAnimal = ?";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setBoolean(1, vendido);
+            statement.setInt(2, idPorco);
             statement.executeUpdate();
         }
     }

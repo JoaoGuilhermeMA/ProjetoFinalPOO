@@ -43,6 +43,7 @@ public class AddVenda {
     @FXML
     void onClickCadastrar(ActionEvent event) throws SQLException {
         VendidosDAO vendidosDAO = new VendidosDAO(cox.getConexao());
+        PorcoDAO porcoDAO = new PorcoDAO(cox.getConexao());
 
         Vendidos novaVenda = new Vendidos();
         novaVenda.setCpfComprador(campoCPF.getText());
@@ -51,8 +52,10 @@ public class AddVenda {
         java.sql.Date sqlDate = java.sql.Date.valueOf(selectData.getValue());
         novaVenda.setDataVenda(sqlDate);
 
+        porcoDAO.atualizarStatusVendaPorco(this.porco.getIdAnimal(),false);
+        porcoDAO.editarPorco(this.porco);
+
         vendidosDAO.adicionarVenda(novaVenda);
-        PorcoDAO porcoDAO = new PorcoDAO(cox.getConexao());
 
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Platform.runLater(() -> {
@@ -75,6 +78,7 @@ public class AddVenda {
         });
     }
 
+
     @FXML
     void onClickVoltar(ActionEvent event) {
 
@@ -83,4 +87,5 @@ public class AddVenda {
     public void setPorcoId(Porco porco) {
         this.porco = porco;
     }
+
 }

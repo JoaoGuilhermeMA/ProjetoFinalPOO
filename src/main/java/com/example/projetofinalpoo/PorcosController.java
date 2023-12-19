@@ -150,7 +150,7 @@ public class PorcosController {
 
     private void carregarDadosNaTableView() {
         try {
-            List<Porco> listaPorcos = porcoDAO.listarPorcosComRelacoes();
+            List<Porco> listaPorcos = porcoDAO.listarPorcosAtivos();
             ObservableList<Porco> listaObservable = FXCollections.observableArrayList(listaPorcos);
             tabelaPorcos.setItems(listaObservable);
         } catch (SQLException e) {
