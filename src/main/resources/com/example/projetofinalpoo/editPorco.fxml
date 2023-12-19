@@ -9,17 +9,23 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.EditPorcoController">
    <children>
-      <Button fx:id="salvarDados" layoutX="676.0" layoutY="581.0" mnemonicParsing="false" text="Salvar">
+      <Button fx:id="salvarDados" layoutX="676.0" layoutY="581.0" mnemonicParsing="false" onAction="#clickAlterar" text="Salvar">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button fx:id="voltar" layoutX="177.0" layoutY="581.0" mnemonicParsing="false" text="+">
+      <Button fx:id="voltar" layoutX="177.0" layoutY="581.0" mnemonicParsing="false" onAction="#voltarPorco" text="+">
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <TextField layoutX="358.0" layoutY="335.0" prefHeight="25.0" prefWidth="68.0" promptText="Digite a idade">
+      <TextField fx:id="campoIdade" layoutX="358.0" layoutY="335.0" prefHeight="25.0" prefWidth="68.0" promptText="Digite a idade">
          <font>
             <Font size="14.0" />
          </font>
@@ -27,7 +33,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="586.0" layoutY="335.0" promptText="Digite o peso">
+      <TextField fx:id="campoPeso" layoutX="586.0" layoutY="335.0" promptText="Digite o peso">
          <font>
             <Font size="14.0" />
          </font>
@@ -75,12 +81,12 @@
             <Font name="Bauhaus 93" size="64.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="125.0" layoutY="263.0" prefHeight="25.0" prefWidth="160.0">
+      <ChoiceBox fx:id="selectSexo" layoutX="125.0" layoutY="263.0" prefHeight="25.0" prefWidth="160.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <TextField layoutX="370.0" layoutY="261.0" prefHeight="0.0" prefWidth="213.0" promptText="Digite a raça">
+      <TextField fx:id="campoRaca" layoutX="370.0" layoutY="261.0" prefHeight="0.0" prefWidth="213.0" promptText="Digite a raça">
          <font>
             <Font size="14.0" />
          </font>
@@ -88,17 +94,17 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <ChoiceBox layoutX="736.0" layoutY="263.0" prefHeight="25.0" prefWidth="219.0">
+      <ChoiceBox fx:id="selectVivedouro" layoutX="736.0" layoutY="263.0" prefHeight="25.0" prefWidth="219.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <ChoiceBox layoutX="239.0" layoutY="413.0" prefHeight="25.0" prefWidth="243.0">
+      <ChoiceBox fx:id="selectMedicacao" layoutX="239.0" layoutY="413.0" prefHeight="25.0" prefWidth="243.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ChoiceBox>
-      <ChoiceBox layoutX="630.0" layoutY="413.0" prefHeight="25.0" prefWidth="272.0">
+      <ChoiceBox fx:id="selectCuidador" layoutX="630.0" layoutY="413.0" prefHeight="25.0" prefWidth="272.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
