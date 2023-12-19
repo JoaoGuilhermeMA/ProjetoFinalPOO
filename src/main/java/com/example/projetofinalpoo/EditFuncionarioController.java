@@ -56,7 +56,6 @@ public class EditFuncionarioController {
     public void editarFuncionario(Cuidador funcionario) {
         this.funcionarioEditar = funcionario;
 
-        // Preencha os campos com os dados do funcionário
         if (funcionario != null) {
             nomeFunc.setText(funcionario.getNome());
             cpfFunc.setText(funcionario.getCpf());
@@ -92,7 +91,6 @@ public class EditFuncionarioController {
                 "-fx-max-width: 300px"
         );
         alert.showAndWait();
-
 
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Platform.runLater(() -> {

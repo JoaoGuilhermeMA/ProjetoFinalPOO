@@ -24,3 +24,7 @@
     -fx-border-color: black;
     -fx-background-color: #e6d8cb;
 }
+
+.label{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+}

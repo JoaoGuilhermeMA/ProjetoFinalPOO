@@ -24,7 +24,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="314.0" layoutY="313.0" prefWidth="211.0" promptText="Digite o tipo do vivedouro">
+      <TextField fx:id="tipoVivedouro" layoutX="314.0" layoutY="313.0" prefWidth="211.0" promptText="Digite o tipo do vivedouro">
          <font>
             <Font size="16.0" />
          </font>
@@ -32,7 +32,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <TextField layoutX="723.0" layoutY="313.0" prefWidth="164.0" promptText="Defina seu tamanho">
+      <TextField fx:id="tamanhoVivedouro" layoutX="723.0" layoutY="313.0" prefWidth="164.0" promptText="Defina seu tamanho">
          <font>
             <Font size="16.0" />
          </font>
@@ -40,7 +40,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Button layoutX="228.0" layoutY="582.0" mnemonicParsing="false" text="+">
+      <Button fx:id="voltar" layoutX="228.0" layoutY="582.0" mnemonicParsing="false" onAction="#voltarVivedouro" text="+">
          <font>
             <Font size="24.0" />
          </font>
@@ -48,7 +48,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="727.0" layoutY="582.0" mnemonicParsing="false" text="Salvar">
+      <Button fx:id="salvarDados" layoutX="727.0" layoutY="582.0" mnemonicParsing="false" onAction="#clickAlterar" text="Salvar">
          <font>
             <Font size="24.0" />
          </font>

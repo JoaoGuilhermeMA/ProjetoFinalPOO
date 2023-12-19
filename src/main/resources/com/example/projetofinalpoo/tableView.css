@@ -63,3 +63,7 @@
 .table-cell {
     -fx-alignment: CENTER;
 }
+
+.label{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+}

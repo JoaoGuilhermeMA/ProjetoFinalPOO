@@ -13,14 +13,14 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.VivedouroController">
    <children>
-      <TableView fx:id="tabelaVivedouro" layoutX="261.0" layoutY="97.0" prefHeight="366.0" prefWidth="478.0">
+      <TableView fx:id="tabelaVivedouro" layoutX="186.0" layoutY="95.0" prefHeight="366.0" prefWidth="615.0">
         <columns>
           <TableColumn fx:id="idVivedouro" prefWidth="36.0" text="ID" />
           <TableColumn fx:id="tipoVivedouro" minWidth="1.0" prefWidth="314.0" text="TIPO DO VIVEDOURO" />
             <TableColumn fx:id="tamanho" minWidth="0.0" prefWidth="127.0" text="TAMANHO" />
         </columns>
       </TableView>
-      <Button fx:id="adicionar" layoutX="751.0" layoutY="611.0" mnemonicParsing="false" onAction="#adicionarVivedouro" text="+">
+      <Button fx:id="adicionar" layoutX="745.0" layoutY="610.0" mnemonicParsing="false" onAction="#adicionarVivedouro" text="+">
          <font>
             <Font size="18.0" />
          </font>
@@ -28,7 +28,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="voltar" layoutX="224.0" layoutY="611.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
+      <Button fx:id="voltar" layoutX="218.0" layoutY="610.0" mnemonicParsing="false" onAction="#voltarInicio" text="+">
          <font>
             <Font size="18.0" />
          </font>
