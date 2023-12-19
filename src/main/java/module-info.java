@@ -8,4 +8,5 @@ module com.example.projetofinalpoo {
     opens com.example.projetofinalpoo to javafx.fxml;
     opens dominio to javafx.base;
     exports com.example.projetofinalpoo;
+    opens persistencia to javafx.base;
 }

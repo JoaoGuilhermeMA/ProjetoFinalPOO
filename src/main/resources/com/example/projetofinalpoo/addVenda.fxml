@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetofinalpoo.AddVenda">
+   <children>
+      <Button fx:id="btnVoltar" layoutX="73.0" layoutY="283.0" mnemonicParsing="false" onAction="#onClickVoltar" text="voltar" />
+      <Label layoutX="96.0" layoutY="82.0" text="CPF comprador" />
+      <TextField fx:id="campoCPF" layoutX="187.0" layoutY="78.0" />
+      <Button layoutX="423.0" layoutY="283.0" mnemonicParsing="false" onAction="#onClickCadastrar" text="Cadastrar" />
+      <Label layoutX="96.0" layoutY="123.0" text="Preço total" />
+      <TextField fx:id="campoPreco" layoutX="187.0" layoutY="119.0" />
+      <DatePicker fx:id="selectData" layoutX="187.0" layoutY="157.0" />
+      <Label layoutX="99.0" layoutY="161.0" text="Data da venda" />
+   </children>
+</AnchorPane>

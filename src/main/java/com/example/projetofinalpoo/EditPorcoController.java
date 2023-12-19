@@ -1,9 +1,6 @@
 package com.example.projetofinalpoo;
 
-import dominio.Cuidador;
-import dominio.Medicacao;
-import dominio.Porco;
-import dominio.Vivedouro;
+import dominio.*;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -17,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import persistencia.*;
+import javafx.scene.control.CheckBox;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -39,6 +37,9 @@ public class EditPorcoController {
     private ChoiceBox<String> selectSexo;
     @FXML
     private ChoiceBox<Vivedouro> selectVivedouro;
+
+    @FXML
+    private CheckBox checkVendido;
 
     Conexao cox = new Conexao();
     private Porco porcoEditar;
@@ -93,7 +94,7 @@ public class EditPorcoController {
         }
     }
     @FXML
-    void clickAlterar(ActionEvent event) throws SQLException {
+    void clickAlterar(ActionEvent event) throws SQLException, IOException {
         Conexao conexao = new Conexao();
         PorcoDAO porcoDAO = new PorcoDAO(conexao.getConexao());
         porcoEditar.setIdade(Integer.parseInt(campoIdade.getText()));
@@ -103,7 +104,36 @@ public class EditPorcoController {
         porcoEditar.setCuidador(selectCuidador.getValue());
         porcoEditar.setMedicacao(selectMedicacao.getValue());
         porcoEditar.setVivedouro(selectVivedouro.getValue());
+        boolean isChecked = checkVendido.isSelected();
+
+        if (isChecked) {
+            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("addVenda.fxml"));
+            Parent root = loader.load();
+
+            AddVenda addVendaController = loader.getController();
+            addVendaController.setPorcoId(porcoEditar); // Configura o ID do Porco
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+            VendidosDAO vendidosDAO = new VendidosDAO(conexao.getConexao());
+
+            Vendidos venda = new Vendidos();
+            venda.setIdAnimal(porcoEditar.getIdAnimal());
+
+            vendidosDAO.adicionarVenda(venda);
+
+            conexao.fecharConexao();
+        } else {
+
+            System.out.println("O CheckBox não está marcado. A atualização não será realizada.");
+        }
         porcoDAO.editarPorco(porcoEditar);
+
         conexao.fecharConexao();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
